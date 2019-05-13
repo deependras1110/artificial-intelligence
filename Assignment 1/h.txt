@@ -1,0 +1,13 @@
+acity 25
+bcity 15
+ccity 15
+dcity 15
+ecity 10
+fcity 0
+gcity 10
+hcity 10
+icity 5
+jcity 15
+kcity 10
+lcity 15
+END OF INPUT

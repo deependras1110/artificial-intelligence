@@ -1,0 +1,26 @@
+(operator
+ moveAdult
+ (params
+  (<a> Adult) (<loc1> Location) (<loc2> Location))
+ (preconds
+  (on <a> <loc1>) (on B <loc1>))
+ (effects
+  (on <a> <loc2>) (on B <loc2>) (del on <a> <loc1>) (del on B <loc1>)))
+
+(operator
+ moveChild
+ (params
+  (<a> Child) (<loc1> Location) (<loc2> Location))
+ (preconds
+  (on <a> <loc1>) (on B <loc1>))
+ (effects
+  (on <a> <loc2>) (on B <loc2>) (del on <a> <loc1>) (del on B <loc1>)))
+
+(operator
+ moveChildren
+ (params
+  (<a> Child) (<b> Child) (<loc1> Location) (<loc2> Location))
+ (preconds
+  (on <a> <loc1>) (on <b> <loc1>) (on B <loc1>))
+ (effects
+  (on <a> <loc2>) (on <b> <loc2>) (on B <loc2>) (del on <a> <loc1>) (del on <b> <loc1>) (del on B <loc1>)))

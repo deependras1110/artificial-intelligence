@@ -1,0 +1,13 @@
+(A1 Adult)
+(A2 Adult)
+(C1 Child)
+(C2 Child)
+(L Location)
+(R Location)
+(B Boat)
+
+(preconds
+ (on A1 L) (on A2 L) (on C1 L) (on C2 L) (on B L))
+
+(effects
+ (on A1 R) (on A2 R) (on C1 R) (on C2 R))

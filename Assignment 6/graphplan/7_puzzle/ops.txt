@@ -1,0 +1,8 @@
+(operator
+ move
+ (params 
+  (<a> Piece) (<x> Empty) (<loc1> Location) (<loc2> Location))
+ (preconds
+  (on <a> <loc1>) (on <x> <loc2>) (adj <loc1> <loc2>))
+ (effects
+  (on <x> <loc1>) (on <a> <loc2>) (del on <a> <loc1>) (del on <x> <loc2>))

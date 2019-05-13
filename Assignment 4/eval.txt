@@ -1,0 +1,53 @@
+_______________________________________________________________________________________________________
+
+Evaluation Algorithm:
+
+This evaluation algorithm is only applicable on children on 'min' nodes.
+
+The following steps of the algorithm have been mentioned below:
+#1 - To find the allowed Moves of the 'max' nodes
+#2 - For each allowed move, we find the best move to win, loose as well as play based on probabilities.
+
+        The algorithm is designed to find winning states for each move played.
+        It also finds the states where the opposition could win. This is termed as loose states.
+        A score for both win and loose is assigned and the best among them is selected.
+        That is, if the win state is 2 on column 4 and loose state is 3 on column 6, 
+            then loose state is chosen.
+        
+        As said, the algorithm also runs on probabilities and possibilities.
+        The algorithm computes among the best moves, to see where the possibility of winning is more.
+        That is, for an empty set like:
+
+                                  1 2 3 4 5 6 7
+
+                            F.    0 0 0 0 0 0 0
+                            E.    0 0 0 0 0 0 0
+                            D.    0 0 0 0 0 0 0
+                            C.    0 0 0 0 0 0 0
+                            B.    0 0 0 0 0 0 0
+                            A.    0 0 0 0 0 0 0
+
+                Here the current possible moves are A1, A2, A3, A4, A5, A6, A7
+
+                To find the probabilities:
+                    The algorithm could win on A1 only when 
+                        1. A1, B1, C1 and D1 are computer
+                        2. A1, A2, A3 and A4 are computer
+                        3. A1, B2, C3 and D4 are computer
+                    Thus A1 has a probability of 3.
+
+                    Similarly to win on A2, there are:
+                        1. A2, B2, C2 and D2 are computer
+                        2. A1, A2, A3 and A4 are computer
+                        2. A2, A3, A4 and A5 are computer
+                        3. A1, B2, C3 and D4 are computer
+                    Thus A2 has a possibilities of 4.
+
+                For the current game state we get A4 to have maximum playing possibility that is 6.
+
+        For all the moves, the possibilities are computed and the best is selected.
+
+        If the program sees that there are no probabilities for any of the moves, 
+        then a random move is played baseed on the available moves.
+
+_______________________________________________________________________________________________________

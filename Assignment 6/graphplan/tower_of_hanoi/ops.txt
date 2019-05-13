@@ -1,0 +1,35 @@
+(operator
+ moveFromPegToPeg
+ (params
+  (<fromPeg> Peg) (<toPeg> Peg) (<disk> Disk))
+ (preconds
+  (on <disk> <fromPeg>) (clear <toPeg>) (clear <disk>))
+ (effects
+  (clear <fromPeg>) (on <disk> <toPeg>) (del clear <toPeg>) (del on <disk> <fromPeg>)))
+
+(operator
+ moveFromPegToDisk
+ (params
+  (<fromPeg> Peg) (<toDisk> Disk) (<disk> Disk))
+ (preconds
+  (on <disk> <fromPeg>) (clear <toDisk>) (clear <disk>))
+ (effects
+  (clear <fromPeg>) (on <disk> <toDisk>) (del clear <toDisk>) (del on <disk> <fromPeg>)))
+
+(operator
+ moveFromDiskToPeg
+ (params
+  (<fromDisk> Disk) (<toPeg> Peg) (<disk> Disk))
+ (preconds
+  (on <disk> <fromDisk>) (clear <toPeg>) (clear <disk>))
+ (effects
+  (clear <fromDisk>) (on <disk> <toPeg>) (del clear <toPeg>) (del on <disk> <fromDisk>)))
+
+(operator
+ moveFromDiskToDisk
+ (params
+  (<fromDisk> Disk) (<toDisk> Disk) (<disk> Disk))
+ (preconds
+  (on <disk> <fromDisk>) (clear <toDisk>) (clear <disk>))
+ (effects
+  (clear <fromDisk>) (on <disk> <toDisk>) (del clear <toDisk>) (del on <disk> <fromDisk>)))

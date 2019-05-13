@@ -1,0 +1,17 @@
+acity bcity 10
+acity gcity 10
+bcity ccity 5
+bcity gcity 10
+ccity dcity 5
+dcity ecity 5
+dcity icity 10
+ecity fcity 10
+fcity gcity 15
+fcity icity 6
+hcity bcity 6
+hcity gcity 10
+icity hcity 6
+jcity lcity 10
+kcity jcity 5
+lcity kcity 6
+END OF INPUT

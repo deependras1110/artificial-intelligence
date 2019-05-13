@@ -1,0 +1,11 @@
+(disk1 Disk)
+(disk2 Disk)
+(A Peg)
+(B Peg)
+(C Peg)
+
+(preconds
+ (on disk1 disk2) (on disk2 A) (clear disk1) (clear B) (clear C))
+
+(effects
+ (on disk1 B) (on disk2 C))
